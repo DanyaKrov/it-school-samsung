@@ -3,7 +3,16 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
-        System.out.println(a % 10 + a / 100 + (a % 100) / 10 + " " + (a + 2 - a % 2));
+        int n = in.nextInt();
+        int num = 1;
+        int x = 0;
+        int num_last = 0;
+        while(n > 1){
+            x = num;
+            num += num_last;
+            num_last = x;
+            n--;
+        }
+        System.out.println(num);
     }
 }

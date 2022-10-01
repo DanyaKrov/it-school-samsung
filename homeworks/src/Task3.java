@@ -5,14 +5,27 @@ public class Task3 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        String min = Integer.toString((n % 3600) / 60);
-        if (min.length() == 1){
-            min = "0" + min;
+        if (n <= 10 || n >= 20){
+            switch (n % 10){
+                case (1):
+                    System.out.println(n + " TORT");
+                    break;
+                case (2):
+                    System.out.println(n + " TORTA");
+                    break;
+                case (3):
+                    System.out.println(n + " TORTA");
+                    break;
+                case (4):
+                    System.out.println(n + " TORTA");
+                    break;
+                default:
+                    System.out.println(n + " TORTOV");
+                    break;
+            }
         }
-        String sec = Integer.toString(n % 60);
-        if (sec.length() == 1){
-            sec = "0" + sec;
+        else{
+            System.out.println(n + " TORTOV");
         }
-        System.out.println(n / 3600 + ":" + min + ":" + sec);
     }
 }
