@@ -3,7 +3,15 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
-        System.out.println(a % 10 + a / 100 + (a % 100) / 10 + " " + (a + 2 - a % 2));
+        int num = in.nextInt();
+        int n = in.nextInt();
+        String s = "";
+        String num_s = Integer.toString(num);
+       for (char x : num_s.toCharArray()){
+            if (Character.getNumericValue(x) != n){
+                s += x;
+            }
+        }
+        System.out.println(s);
     }
 }
