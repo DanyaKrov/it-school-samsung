@@ -1,14 +1,17 @@
 import java.util.Scanner;
 import java.lang.String;
 
-public class Task4 {
+public class Task4 { // таблица умножения
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String n = in.nextLine();
-        float float_number = Float.parseFloat(n);
-        if (float_number < -2 || (float_number > 3 && float_number < 6) || float_number > 9)
-            System.out.println("true");
-        else
-            System.out.println("false");
+        int[][] a;
+        int n = in.nextInt();
+        int m = in.nextInt();
+        a = new int[n][m];
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                a[i][j] = i * j;
+            }
+        }
     }
 }
